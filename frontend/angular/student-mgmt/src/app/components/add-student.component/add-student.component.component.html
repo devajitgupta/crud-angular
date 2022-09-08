@@ -1,0 +1,71 @@
+<div class="modal d-block" data-bs-backdrop="true" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">{{title}}</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="onExit()"></button>
+      </div>
+
+      <!-- Modal body -->
+      <form [formGroup]="form">
+        <div class="row p-3">
+          <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Name</label>
+              <input type="text" class="form-control" formControlName="name" aria-describedby="emailHelp"
+                placeholder="Enter email">
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="form-group">
+              <label>Father Name</label>
+              <input type="text" class="form-control" formControlName="fatherName" placeholder="">
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6">
+
+            <div class="form-group">
+              <label>Mother Name</label>
+              <input type="" class="form-control" formControlName="motherName">
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6">
+
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" class="form-control" formControlName="email" placeholder="">
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6">
+
+            <div class="form-group">
+              <label>DOB</label>
+              <input type="number" class="form-control" formControlName="dob" placeholder="">
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6">
+
+            <div class="form-group">
+              <label>Country</label>
+              <input type="text" class="form-control" formControlName="country" placeholder="">
+            </div>
+          </div>
+
+        </div>
+      </form>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button *ngIf="!readOnly" [disabled]="!isValid" type="button" class="btn btn-success" data-dismiss="modal"
+          (click)="onSubmit()">Save</button>
+        <button *ngIf="readOnly" type="button" class="btn btn-primary" data-dismiss="modal"
+          (click)="enableForm()">Edit</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="onExit()">Cancel</button>
+      </div>
+
+    </div>
+  </div>
+</div>
