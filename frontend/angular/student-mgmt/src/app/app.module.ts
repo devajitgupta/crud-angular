@@ -4,10 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AddStudentComponentComponent } from './add-student.component/add-student.component.component';
-import { ShowStudentComponentComponent } from './show-student.component/show-student.component.component';
-import { SingleStudentComponentComponent } from './single-student.component/single-student.component.component';
-import {HttpClientModule} from '@angular/common/http';
+import { AddStudentComponentComponent } from './components/add-student.component/add-student.component.component';
+import { ShowStudentComponentComponent } from './components/show-student.component/show-student.component.component';
+import { SingleStudentComponentComponent } from './components/single-student.component/single-student.component.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +18,8 @@ import {HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,ReactiveFormsModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
 
   ],
